@@ -3,7 +3,7 @@ The python code demonstrates a simple non-linear control law for an inverted pen
 
 I wrote the python code to demonstrate that not only the idea can work, but that it is also stable for a wider set of initial disturbed conditions compared to a simple PD controller. Another feature of this control law is that for [small angles] (https://en.wikipedia.org/wiki/Small-angle_approximation) it is equivalent to a PD controller. The weights of the controller can be estimated directly from the equivalent linearized damped pendulum system, to give the required overshoot and settling time.
 
-The code uses a [costum Runge-Kutta solver] (https://github.com/sbillaudelle/runge-kutta) to solve the equations of motion in between the controller sampling times. After each iteration the pendulum angle is recorded with some normal noise and the control acceleration is updated. The pendulum's angular speed is estimated (for now) using a first order backward difference.
+The code uses a [custom Runge-Kutta solver] (https://github.com/sbillaudelle/runge-kutta) to solve the equations of motion in between the controller sampling times. After each iteration the pendulum angle is recorded with some normal noise and the control acceleration is updated. The pendulum's angular speed is estimated (for now) using a first order backward difference.
 
 When the code is run it outputs the following graphs:
 * A graph of the angle of the pendulum from vertical over time for a damped pendulum and a linearized damped pendulum with its envelope function, to show how fast its motion decays. One can see how the actual and linearized motion diverges over time. This graph can be used to determine what response one wants from the ED controller.
