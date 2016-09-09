@@ -7,5 +7,5 @@ The code uses a [custom Runge-Kutta solver] (https://github.com/sbillaudelle/run
 
 When the code is run it outputs the following graphs:
 * A graph of the angle of the pendulum from vertical over time for a damped pendulum and a linearized damped pendulum with its envelope function, to show how fast its motion decays. One can see how the actual and linearized motion diverges over time. This graph can be used to determine what response one wants from the ED controller.
-* A graph of the angle over time for inverted pendulum without a controller, to get an idea of the time scales of the problem, etc.
+* A graph of the angle over time for an inverted pendulum without a controller, to get an idea of the time scales of the problem, etc.
 * A graph of the angle over time for the same inverted pendulum, being controlled by a PD and an ED controller. The PD controller has very similar weights to the ED controller for small angles. One can increase the initial pendulum angle and see that the ED controller can function even with large initial pendulum angles.
